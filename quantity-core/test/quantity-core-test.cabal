@@ -1,0 +1,39 @@
+name:               irreverent-quantity-core-test
+version:            0.0.1
+license:            BSD3
+author:             Dom De Re
+maintainer:         Dom De Re
+copyright:          Copyright (C) 2017-2018 Irreverent Pixel Feats
+synopsis:           Quantities and Units
+category:           Data
+description:        Quantities and Units
+homepage:           https://github.com/irreverent-pixel-feats/quantity/issues
+bug-reports:        https://github.com/irreverent-pixel-feats/quantity/issues
+cabal-version:      >= 1.18
+build-type:         Simple
+--extra-source-files: etc/CONTRIBUTORS,
+--                    etc/CREDITS
+
+source-repository       head
+    type:               git
+    location:           https://github.com/irreverent-pixel-feats/quantity.git
+
+flag                    small_base
+    description:        Choose the new, split-up base package.
+
+library
+    default-language:   Haskell2010
+
+    build-depends:      base < 5 && >= 4
+                    ,   containers
+                    ,   array
+                    ,   lab-core
+                    ,   domdere-preamble
+                    ,   irreverent-quantity-core
+                    ,   QuickCheck              == 2.10.*
+
+    ghc-options:        -Wall
+
+    hs-source-dirs:     .
+
+    exposed-modules:    Test.Irreverent.Quantity.Core.Arbitrary
