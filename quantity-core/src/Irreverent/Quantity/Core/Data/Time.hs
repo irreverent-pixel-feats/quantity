@@ -38,7 +38,6 @@ module Irreverent.Quantity.Core.Data.Time (
 import Data.Data (Data)
 
 import Preamble
-import Prelude (Integral(..), Integer, mod, quot)
 
 -- wraps an integer representing microseconds
 newtype DurationQuantity = DurationQuantity Integer deriving (Show, Eq, Data)

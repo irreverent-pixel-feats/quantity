@@ -32,7 +32,6 @@ module Irreverent.Quantity.Core.Data.Frequency (
 import Data.Data ( Data )
 
 import Preamble
-import Prelude ( Integral(..), Integer, mod, quot )
 
 -- wraps an integer representing hz
 newtype FrequencyQuantity = FrequencyQuantity Integer deriving (Show, Eq, Data)

@@ -32,7 +32,6 @@ module Irreverent.Quantity.Core.Data.Bytes (
 import Data.Data (Data)
 
 import Preamble
-import Prelude (Integral(..), Integer, mod, quot)
 
 -- wraps an integer representing bytes
 newtype BytesQuantity = BytesQuantity Integer deriving (Show, Eq, Data)
