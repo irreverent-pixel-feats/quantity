@@ -1,3 +1,4 @@
+{-# LANGUAGE NoImplicitPrelude #-}
 -------------------------------------------------------------------
 -- |
 -- Module       : Test.Irreverent.Quantity.Core.Arbitrary
@@ -22,10 +23,7 @@ import Irreverent.Quantity.Core.Data.Time as T
 
 import Lab.Core.QuickCheck
 
-import Test.QuickCheck (NonNegative(..))
-
 import Preamble
-import Prelude (Integer)
 
 bytesUnits :: Gen BytesUnits
 bytesUnits = elements
