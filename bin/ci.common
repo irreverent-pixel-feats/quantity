@@ -9,5 +9,5 @@ find . -type f -name '*.cabal' | grep -v '^\./lib' | while read P; do
   cd "$(dirname "${P}")"
   ./mafia build
   ./mafia test
-  cd ../
+  cd -
 done
