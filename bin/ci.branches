@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+ROOT_DIR=$(pwd) || exit $?
+
+cabal update
+
+bin/ci.common
