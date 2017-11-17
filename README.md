@@ -1,4 +1,4 @@
-# quantity
+# quantity [![Build Status](https://img.shields.io/travis/irreverent-pixel-feats/quantity.svg?style=flat)](https://travis-ci.org/irreverent-pixel-feats/quantity)
 
 ## Description
 
