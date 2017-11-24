@@ -1,21 +1,22 @@
 {-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE OverloadedLists #-}
 -------------------------------------------------------------------
 -- |
 -- Module       : Test.Irreverent.Quantity.Core.Arbitrary
--- Copyright    : (C) 2015
+-- Copyright    : (C) 2017-2018 Irreverent Pixel Feats
 -- License      : BSD-style (see the file etc/LICENSE.md)
 -- Maintainer   : Dom De Re
 --
 -------------------------------------------------------------------
 module Test.Irreverent.Quantity.Core.Arbitrary (
-    -- * Generators
-        bytesUnits
-    ,   bytesQuantity
-    ,   durationUnits
-    ,   durationQuantity
-    ,   frequencyUnits
-    ,   frequencyQuantity
-    ) where
+  -- * Generators
+    bytesUnits
+  , bytesQuantity
+  , durationUnits
+  , durationQuantity
+  , frequencyUnits
+  , frequencyQuantity
+  ) where
 
 import Irreverent.Quantity.Core.Data.Bytes as B
 import Irreverent.Quantity.Core.Data.Frequency as F
