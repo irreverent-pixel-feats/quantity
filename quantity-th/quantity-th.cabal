@@ -32,7 +32,7 @@ library
                     ,   irreverent-quantity-megaparsec
                     ,   megaparsec              == 6.2.*
                     ,   syb                     == 0.6.*
-                    ,   template-haskell        == 2.12.*
+                    ,   template-haskell        >= 2.11 && < 2.14
                     ,   ultra-text
 
     ghc-options:        -Wall
