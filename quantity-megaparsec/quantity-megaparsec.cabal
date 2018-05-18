@@ -54,3 +54,7 @@ test-suite              test
                     ,   QuickCheck              == 2.10.*
                     ,   ultra-text
                     ,   irreverent-quantity-megaparsec
+
+    other-modules:      Test.Irreverent.Quantity.Megaparsec.Data.Bytes
+                        Test.Irreverent.Quantity.Megaparsec.Data.Frequency
+                        Test.Irreverent.Quantity.Megaparsec.Data.Time

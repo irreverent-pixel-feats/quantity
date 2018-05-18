@@ -31,7 +31,7 @@ library
                     ,   irreverent-quantity-core
                     ,   irreverent-quantity-megaparsec
                     ,   megaparsec              == 6.2.*
-                    ,   syb                     == 0.6.*
+                    ,   syb                     == 0.7.*
                     ,   template-haskell        >= 2.11 && < 2.14
                     ,   ultra-text
 
