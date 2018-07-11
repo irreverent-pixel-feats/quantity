@@ -36,12 +36,18 @@ import Preamble
 -- wraps an integer representing bytes
 newtype BytesQuantity = BytesQuantity Integer deriving (Show, Eq, Data)
 
+mappend' :: BytesQuantity -> BytesQuantity -> BytesQuantity
+mappend' x y = bytes $ ((+) `on` inBytes :: BytesQuantity -> BytesQuantity -> Integer) x y
+
+instance Semigroup BytesQuantity where
+  (<>) = mappend'
+
 instance Monoid BytesQuantity where
 --mempty :: a
   mempty = BytesQuantity 0
 
 --mappend :: a -> a -> a
-  mappend x y = bytes $ ((+) `on` inBytes :: BytesQuantity -> BytesQuantity -> Integer) x y
+  mappend = mappend'
 
 data BytesUnits =
     Bytes

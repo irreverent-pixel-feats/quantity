@@ -36,12 +36,18 @@ import Preamble
 -- wraps an integer representing hz
 newtype FrequencyQuantity = FrequencyQuantity Integer deriving (Show, Eq, Data)
 
+mappend' :: FrequencyQuantity -> FrequencyQuantity -> FrequencyQuantity
+mappend' x y = hz $ ((+) `on` inHz :: FrequencyQuantity -> FrequencyQuantity -> Integer) x y
+
+instance Semigroup FrequencyQuantity where
+  (<>) = mappend'
+
 instance Monoid FrequencyQuantity where
 --mempty :: a
   mempty = FrequencyQuantity 0
 
 --mappend :: a -> a -> a
-  mappend x y = hz $ ((+) `on` inHz :: FrequencyQuantity -> FrequencyQuantity -> Integer) x y
+  mappend = mappend'
 
 data FrequencyUnits =
     Hz
