@@ -42,12 +42,16 @@ import Preamble
 -- wraps an integer representing microseconds
 newtype DurationQuantity = DurationQuantity Integer deriving (Show, Eq, Data)
 
+instance Semigroup DurationQuantity where
+--(<>) :: a -> a -> a
+  x <> y = microseconds $ ((+) `on` inMicroseconds :: DurationQuantity -> DurationQuantity -> Integer) x y
+
 instance Monoid DurationQuantity where
 --mempty :: a
   mempty = DurationQuantity 0
 
 --mappend :: a -> a -> a
-  mappend x y = microseconds $ ((+) `on` inMicroseconds :: DurationQuantity -> DurationQuantity -> Integer) x y
+  mappend = (<>)
 
 data DurationUnits =
     Microseconds
